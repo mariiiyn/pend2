@@ -21,7 +21,8 @@ let resultado = (somar (5, 3));
 function calcularImc(peso, altura) {
     return peso / (altura * altura);
 }
-let peso = 58;
+let peso = prompt ("Digite seu peso em kg:");
+
 let altura = 1.65;
 console.log(calcularImc(peso, altura));
 
@@ -33,6 +34,12 @@ function parOuImpar(numero) {
         return "Ímpar";
     }   
 }
-let numero = 10;
+let numero = prompt("Digite um número:");
 console.log(parOuImpar(numero));
+
+
+console.log("funcoes nativas")/*data e hora*/
+let agora = new Date();
+console.log(agora);
+
 
