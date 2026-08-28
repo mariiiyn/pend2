@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: #5800aa;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #d8c7e8;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    background-color: rgb(146, 63, 255);
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+button {
+    background: linear-gradient(135deg, #9d4edd, #7b2cbf);
+    color: rgb(102, 45, 104);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.preview {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 3px solid #9d4edd;
+    box-shadow: 0 0 25px rgba(157, 78, 221, 0.5);
+}
+
+.jogo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.pecas,
+.tabuleiro {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.pecas {
+    width: 330px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+
+.peca {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    cursor: grab;
+    transition: 0.2s;
+}
+
+.peca:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 12px rgba(199, 125, 255, 0.7);
+}
+
+.peca:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+}
+
+.arrastando {
+    opacity: 0.5;
+}
+
+.tabuleiro {
+    width: 330px;
+    height: 330px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.espaco {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 2px dashed #9d4edd;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.espaco:hover {
+    background-color: rgba(157, 78, 221, 0.2);
+    border-color: #c77dff;
+}
+
+#mensagem {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #c77dff;
+}
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 25px 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .jogo {
+        gap: 30px;
+    }
+
+}
