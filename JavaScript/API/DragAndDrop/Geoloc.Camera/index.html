@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Cliente</h1>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Localização</h2>
+            <p> Use a localização do dispositivo para registrar o local do seu registro.</p>
+            <div class="informacoes">
+                <p>
+                    <strong>Latitude:</strong>
+                    <span id="latitude">Aguardando...</span>
+                </p>
+                <p>
+                    <strong>Longitude:</strong>
+                    <span id="longitude">Aguardando...</span>
+                </p>
+                <p>
+                    <strong>Precisão:</strong>
+                    <span id="precisao">Aguardando...</span>
+                </p>
+            </div>
+            <button onclick="pegarLocalizacao()">
+                Obter localização
+            </button>
+            <p id="erroLocalizacao" class="erro"></p>
+        </section>
+        <section class="card">
+            <h2>Câmera</h2>
+            <p>Utilize a câmera para registrar uma foto durante o registro. </p>
+
+            <video id="camera" autoplay playsinline></video>
+
+            <div class="botoes">
+                <button onclick="abrirCamera()">
+                    Abrir câmera
+                </button>
+
+                <button onclick="tirarFoto()">
+                    Tirar foto
+                </button>
+            </div>
+            <canvas id="foto"></canvas>
+            <p id="erroCamera" class="erro"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Registro de Cliente</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
