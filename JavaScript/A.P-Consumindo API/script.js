@@ -68,4 +68,4 @@ async function buscarPersonagem() {
 
         console.error(erro);
     }
-}
+}       

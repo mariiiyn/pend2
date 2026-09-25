@@ -1,0 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia, serif;
+    background:#fafafa;
+    color:#111;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:white;
+    border-bottom:1px solid #ddd;
+    padding:15px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.logo h1{
+    font-size:2rem;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#111;
+    text-decoration:none;
+    font-size:1rem;
+}
+
+nav a:hover{
+    color:#7b2cbf;
+}
+
+main{
+    width:86%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.inicio{
+    text-align:center;
+    padding:70px 20px;
+}
+
+.inicio h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.inicio p{
+    font-size:1.1rem;
+    color:#555;
+}
+
+.clima{
+    padding:25px;
+    margin-bottom:50px;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.clima h2{
+    color:#7b2cbf;
+    margin-bottom:15px;
+}
+
+.clima p{
+    margin:8px 0;
+    color:#555;
+}
+
+.noticias{
+    padding:20px 0 70px;
+}
+
+.noticias h2{
+    font-size:2rem;
+    margin-bottom:25px;
+    border-bottom:2px solid #7b2cbf;
+    padding-bottom:10px;
+}
+
+#noticiasApi{
+    width:100%;
+}
+
+.noticia-api{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.noticia-api img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.noticia-api h3{
+    font-size:1.5rem;
+    font-weight:normal;
+    margin-bottom:10px;
+}
+
+.noticia-api p{
+    color:#555;
+    line-height:1.6;
+    margin-bottom:8px;
+}
+
+.noticia-api a{
+    color:#7b2cbf;
+    text-decoration:none;
+}
+
+.noticia-api a:hover{
+    text-decoration:underline;
+}
+
+.carregando{
+    text-align:center;
+    padding:30px;
+    color:#7b2cbf;
+}
+
+.erro{
+    text-align:center;
+    padding:30px;
+    color:#b00020;
+}
+
+footer{
+    background:#27014b;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:5px;
+}
+
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .inicio h2{
+        font-size:2rem;
+    }
+
+    .noticia-api{
+        grid-template-columns:1fr;
+    }
+
+    .noticia-api img{
+        height:220px;
+    }
+}

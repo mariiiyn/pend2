@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsToday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="newstoday.png" alt="NewsToday">
+            <h1>NewsToday</h1>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#noticias">Notícias</a>
+            <a href="#clima">Clima</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="inicio">
+            <h2>Notícias atuais</h2>
+            <p>Confira as notícias mais recentes.</p>
+        </section>
+
+        <section id="clima" class="clima">
+            <h2>Clima em Mococa</h2>
+
+            <div id="climaApi">
+                <p class="carregando">Carregando clima...</p>
+            </div>
+        </section>
+
+        <section id="noticias" class="noticias">
+            <h2>Últimas notícias</h2>
+
+            <div id="noticiasApi">
+                <p class="carregando">Carregando notícias atuais...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contato">
+        <h3>NewsToday</h3>
+        <p>Informação de forma simples e rápida.</p>
+        <p>Contato: contato@newstoday.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
